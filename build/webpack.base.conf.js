@@ -1,8 +1,17 @@
+/*
+ * @Author: your name
+ * @Date: 2020-10-13 22:18:37
+ * @LastEditTime: 2020-10-14 09:40:24
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \SimpleTravelApp\build\webpack.base.conf.js
+ */
 'use strict'
 const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+const { reverse } = require('dns')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -27,6 +36,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      'styles': resolve('src/assets/styles'),
     }
   },
   module: {

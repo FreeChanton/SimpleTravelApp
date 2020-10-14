@@ -1,8 +1,16 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-10-13 22:18:37
+ * @LastEditTime: 2020-10-13 23:27:55
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \SimpleTravelApp\src\App.vue
+-->
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+  <div id="app" >
     <router-view/>
   </div>
+
 </template>
 
 <script>
@@ -12,12 +20,5 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
