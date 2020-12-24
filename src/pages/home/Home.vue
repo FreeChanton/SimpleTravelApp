@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-10-13 22:40:36
- * @LastEditTime: 2020-10-14 16:34:32
+ * @LastEditTime: 2020-12-24 17:01:06
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \SimpleTravelApp\src\pages\home\Home.vue
@@ -12,6 +12,7 @@
     <home-swiper></home-swiper>
 
     <home-icons></home-icons>
+    <home-recommend></home-recommend>
   </div>
 </template>
 
@@ -19,12 +20,14 @@
 import HomeHeader from './components/Header';
 import HomeSwiper from './components/Swiper';
 import HomeIcons from './components/Icons';
+import HomeRecommend from './components/Recommend';
 export default {
   name: "Home",
   components: {
     HomeHeader,
     HomeSwiper,
     HomeIcons,
+    HomeRecommend
   }
 };
 </script>
