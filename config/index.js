@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-10-13 22:18:37
- * @LastEditTime: 2020-12-25 15:42:08
+ * @LastEditTime: 2020-12-25 16:07:10
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \SimpleTravelApp\config\index.js
@@ -19,7 +19,7 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      'api':{
+      '/api':{
         target: 'http://localhost:8080',
         pathRewrite: {
           '^/api':'/static/mock'

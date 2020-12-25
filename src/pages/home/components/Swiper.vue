@@ -1,14 +1,14 @@
 <!--
  * @Author: your name
  * @Date: 2020-10-14 14:26:32
- * @LastEditTime: 2020-12-25 15:57:55
+ * @LastEditTime: 2020-12-25 16:25:45
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \SimpleTravelApp\src\pages\home\components\Swiper.vue
 -->
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption" v-if="showSwiper">
       <!-- slides -->
       <swiper-slide v-for="item of list" :key="item.id">
         <img class="swiper-img" :src="item.imgUrl" />
@@ -34,6 +34,11 @@ export default {
       }
       
     };
+  },
+  computed: {
+    showSwiper(){
+      return  this.list.length;
+    }
   }
 };
 </script>

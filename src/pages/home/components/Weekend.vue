@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-25 15:06:00
- * @LastEditTime: 2020-12-25 15:47:43
+ * @LastEditTime: 2020-12-25 16:38:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Editwend
  * @FilePath: \SimpleTravelApp\src\pages\home\components\Weekend.vue
@@ -10,7 +10,7 @@
     <div>
     <div class="title">周末去哪儿</div>
     <ul>
-        <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+        <li class="item border-bottom" v-for="item of list" :key="item.id">
             <div class="item-img-wrapper">
                 <img class="item-img" :src="item.imgUrl" >
             </div>
@@ -26,31 +26,8 @@
 <script>
 export default {
     name: 'HomeWeekend',
-    data(){
-        return {
-        recommendList: [{
-            id: '0001',
-            imgUrl: '/static/img/item-weekend1.jpg',
-            title: '龙门石窟',
-            desc: '世界文化遗产 中国石刻艺术宝库'
-        },{
-            id: '0002',
-            imgUrl: '/static/img/item-weekend2.jpg',
-            title: '龙门石窟',
-            desc: '世界文化遗产 中国石刻艺术宝库'
-        },{
-            id: '0003',
-            imgUrl: '/static/img/item-weekend3.jpg',
-            title: '龙门石窟',
-            desc: '世界文化遗产 中国石刻艺术宝库'
-        },{
-            id: '0004',
-            imgUrl: '/static/img/item-weekend4.jpg',
-            title: '龙门石窟',
-            desc: '世界文化遗产 中国石刻艺术宝库'
-        },
-        ]
-        }
+    props: {
+        list: Array
     }
 }
 </script>
@@ -63,7 +40,7 @@ export default {
     .item-img-wrapper
         overflow hidden
         height 0
-        padding-bottom 33.9%
+        padding-bottom 37.09%
         .item-img
             width 100%
            

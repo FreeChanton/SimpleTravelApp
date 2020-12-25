@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-10-13 22:18:37
- * @LastEditTime: 2020-10-14 14:26:12
+ * @LastEditTime: 2020-12-25 16:14:44
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \SimpleTravelApp\src\main.js
@@ -15,7 +15,7 @@ import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'styles/reset.css'
 import 'styles/border.css'
-import 'styles/iconfont.css'//移动端1像素边框问题
+import './assets/styles/iconfont.css'//移动端1像素边框问题
 import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false

@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2020-10-13 22:42:17
- * @LastEditTime: 2020-12-25 15:53:57
- * @LastEditors: your name
+ * @LastEditTime: 2020-12-25 16:16:59
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \SimpleTravelApp\src\pages\home\components\Header.vue
 -->
@@ -10,15 +10,15 @@
 <template>
     <div class="header">
         <div class="header-left">
-            <div class="iconfont back-icon" >&#xe624;</div>
+            <div class="iconfont back-icon" >&#xe685;</div>
         </div>
         <div class="header-input">
-            <span class="iconfont">&#xe632;</span>
+            <span class="iconfont">&#xe67d;</span>
             输入城市/景点/游玩主题
         </div>
         <div class="header-right">
             {{this.city}}
-            <span class="iconfont arrow-icon">&#xe64a;</span>
+            <span class="iconfont arrow-icon">&#xe688;</span>
         </div>
     </div>
     
