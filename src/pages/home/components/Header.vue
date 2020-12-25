@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-10-13 22:42:17
- * @LastEditTime: 2020-12-25 16:16:59
+ * @LastEditTime: 2020-12-25 17:03:16
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \SimpleTravelApp\src\pages\home\components\Header.vue
@@ -16,10 +16,12 @@
             <span class="iconfont">&#xe67d;</span>
             输入城市/景点/游玩主题
         </div>
+        <router-link to="/city">
         <div class="header-right">
             {{this.city}}
             <span class="iconfont arrow-icon">&#xe688;</span>
         </div>
+        </router-link>
     </div>
     
 </template>
@@ -38,7 +40,7 @@
     @import '~styles/varibles.styl'
     .header
         display: flex
-        line-height: .86rem
+        line-height: $headerHeight
         background: $bgColor
         color: #fff
         .header-left    
@@ -61,6 +63,7 @@
             width: 1.24rem
             float: right
             text-align: center
+            color: #fff
             .arrow-icon
                 margin-left: -.04rem
                 font-size: .24rem
