@@ -20,22 +20,22 @@ export default {
         return {
         recommendList: [{
             id: '0001',
-            imgUrl: '/static/img/item-img (1).jpg',
+            imgUrl: '/static/img/item-img1.jpg',
             title: '龙门石窟',
             desc: '世界文化遗产 中国石刻艺术宝库'
         },{
             id: '0002',
-            imgUrl: '/static/img/item-img (2).jpg',
+            imgUrl: '/static/img/item-img2.jpg',
             title: '龙门石窟',
             desc: '世界文化遗产 中国石刻艺术宝库'
         },{
             id: '0003',
-            imgUrl: '/static/img/item-img (3).jpg',
+            imgUrl: '/static/img/item-img3.jpg',
             title: '龙门石窟',
             desc: '世界文化遗产 中国石刻艺术宝库'
         },{
             id: '0004',
-            imgUrl: '/static/img/item-img (4).jpg',
+            imgUrl: '/static/img/item-img4.jpg',
             title: '龙门石窟',
             desc: '世界文化遗产 中国石刻艺术宝库'
         },
