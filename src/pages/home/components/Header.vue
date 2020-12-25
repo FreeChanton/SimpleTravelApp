@@ -1,23 +1,24 @@
 <!--
  * @Author: your name
  * @Date: 2020-10-13 22:42:17
- * @LastEditTime: 2020-10-14 09:42:33
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-12-25 15:53:57
+ * @LastEditors: your name
  * @Description: In User Settings Edit
  * @FilePath: \SimpleTravelApp\src\pages\home\components\Header.vue
 -->
+
 <template>
     <div class="header">
         <div class="header-left">
-            <div class="iconfont back-icon" >&#xe685;</div>
+            <div class="iconfont back-icon" >&#xe624;</div>
         </div>
         <div class="header-input">
-            <span class="iconfont">&#xe67d;</span>
-            输入城市
+            <span class="iconfont">&#xe632;</span>
+            输入城市/景点/游玩主题
         </div>
         <div class="header-right">
-            城市
-            <span class="iconfont arrow-icon">&#xe688;</span>
+            {{this.city}}
+            <span class="iconfont arrow-icon">&#xe64a;</span>
         </div>
     </div>
     
@@ -25,7 +26,10 @@
 
 <script>
     export default {
-        name: 'HomeHeader'
+        name: 'HomeHeader',
+        props:{
+            city: String
+        }
     }
     
 </script>

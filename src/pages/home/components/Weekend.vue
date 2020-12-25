@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-25 15:06:00
- * @LastEditTime: 2020-12-25 15:23:51
+ * @LastEditTime: 2020-12-25 15:47:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Editwend
  * @FilePath: \SimpleTravelApp\src\pages\home\components\Weekend.vue
@@ -57,7 +57,6 @@ export default {
 <style lang="stylus" scoped>
     @import '~styles/mixins.styl'
     .title
-        margin-top: .2rem
         line-height: .8rem
         background: #eee
         text-indent: .2rem

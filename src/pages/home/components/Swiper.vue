@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-10-14 14:26:32
- * @LastEditTime: 2020-10-14 16:27:06
+ * @LastEditTime: 2020-12-25 15:57:55
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \SimpleTravelApp\src\pages\home\components\Swiper.vue
@@ -10,7 +10,7 @@
   <div class="wrapper">
     <swiper :options="swiperOption">
       <!-- slides -->
-      <swiper-slide v-for="item of swiperList" :key="item.id">
+      <swiper-slide v-for="item of list" :key="item.id">
         <img class="swiper-img" :src="item.imgUrl" />
       </swiper-slide>
 
@@ -23,34 +23,16 @@
 <script>
 export default {
   name: "HomeSwiper",
+  props: {
+    list: Array
+  },
   data() {
     return {
       swiperOption: {
         pagination: ".swiper-pagination",
         loop: true
-      },
-      swiperList: [
-        {
-          id: "001",
-          imgUrl: "static/img/headpic2.jpg"
-        },
-        {
-          id: "002",
-          imgUrl: "static/img/headpic2.jpg"
-        },
-        {
-          id: "003",
-          imgUrl: "static/img/headpic3.jpg"
-        },
-        {
-          id: "004",
-          imgUrl: "static/img/headpic4.jpg"
-        },
-        {
-          id: "005",
-          imgUrl: "static/img/headpic5.jpg"
-        }
-      ]
+      }
+      
     };
   }
 };

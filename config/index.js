@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-10-13 22:18:37
+ * @LastEditTime: 2020-12-25 15:42:08
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \SimpleTravelApp\config\index.js
+ */
 'use strict'
 // Template version: 1.3.1
 // see http://vuejs-templates.github.io/webpack for documentation.
@@ -10,7 +18,14 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      'api':{
+        target: 'http://localhost:8080',
+        pathRewrite: {
+          '^/api':'/static/mock'
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
