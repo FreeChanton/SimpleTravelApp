@@ -1,32 +1,23 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-26 00:11:29
- * @LastEditTime: 2020-12-26 00:17:36
+ * @LastEditTime: 2020-12-26 17:27:05
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \SimpleTravelApp\src\pages\city\components\Alphabet.vue
 -->
 <template>
   <ul class="list">
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
+    <li class="item" v-for="(item,key) of cities" :key="key">{{key}}</li>
+   
   </ul>
 </template>
 <script>
 export default {
-  name: "CityAlphabet"
+  name: "CityAlphabet",
+  props:{
+      cities: Object
+  }
 };
 </script>
 <style lang="stylus" scoped>
