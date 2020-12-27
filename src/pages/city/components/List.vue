@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-25 23:43:14
- * @LastEditTime: 2020-12-26 17:24:24
+ * @LastEditTime: 2020-12-26 17:43:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \SimpleTravelApp\src\pages\city\components\List.vue
@@ -25,7 +25,8 @@
           </div>
         </div>
       </div>
-      <div class="area" v-for="(item, key) of cities" :key="key">
+      <div class="area" v-for="(item, key) of cities" :key="key"
+      :ref="key">
         <div class="title border-topbottom">{{ key }}</div>
         <div class="item-list">
           <div
@@ -46,10 +47,21 @@ export default {
   name: "CityList",
   props: {
     hot: Array,
-    cities: Object
+    cities: Object,
+    letter: String
   },
   mounted() {
     this.scroll = new Bscroll(this.$refs.wrapper);
+  },
+  watch: {
+    letter() { 
+        if(this.letter){
+            const element = this.$refs[this.letter][0]
+            
+            this.scroll.scrollToElement(element)
+        }
+      console.log(this.letter);
+    }
   }
 };
 </script>

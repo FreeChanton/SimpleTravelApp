@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-25 16:46:15
- * @LastEditTime: 2020-12-26 17:26:12
+ * @LastEditTime: 2020-12-26 17:38:47
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \SimpleTravelApp\src\pages\city\City.vue
@@ -11,8 +11,9 @@
   <div>
     <city-header></city-header>
     <city-search></city-search>
-    <city-list :cities="cities" :hot="hotCities"></city-list>
-    <city-alphabet :cities="cities"></city-alphabet>
+    <city-list :cities="cities" :hot="hotCities" :letter="letter"></city-list>
+    <city-alphabet :cities="cities"
+    @change="handleLetterChange"></city-alphabet>
   </div>
 </template>
 <script>
@@ -32,7 +33,8 @@ export default {
   data(){
       return{
           cities:{},
-          hotCities:[]
+          hotCities:[],
+          letter: ''
       }
   },
   methods:{
@@ -47,6 +49,10 @@ export default {
               this.hotCities = data.hotCities;
           }
           console.log(res);
+      },
+      handleLetterChange(letter){
+          this.letter = letter
+          console.log(letter)
       }
   },
   mounted(){
