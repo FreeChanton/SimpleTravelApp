@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-25 23:25:01
- * @LastEditTime: 2020-12-27 14:58:05
+ * @LastEditTime: 2020-12-28 01:11:20
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \SimpleTravelApp\src\pages\city\components\Search.vue
@@ -19,7 +19,12 @@
     </div>
     <div class="search-content" ref="search" v-show="keyword">
       <ul>
-        <li class="search-item border-bottom"  :key="item.id" v-for="item of list">
+        <li
+          class="search-item border-bottom"
+          :key="item.id"
+          v-for="item of list"
+          @click="handleCityClick(item.name)"
+        >
           {{ item.name }}
         </li>
         <li class="search-item border-bottom" v-show="hasNoData">
@@ -31,6 +36,7 @@
 </template>
 <script>
 import Bscroll from "better-scroll";
+import {mapMutations} from 'vuex'
 export default {
   name: "CitySearch",
   props: {
@@ -72,6 +78,13 @@ export default {
         this.list = result;
       }, 100);
     }
+  },
+  methods:{
+    handleCityClick (city) {
+      this.changeCity(city)
+      this.$router.push('/')
+    },
+    ...mapMutations(['changeCity'])
   },
   mounted() {
     this.scroll = new Bscroll(this.$refs.search);

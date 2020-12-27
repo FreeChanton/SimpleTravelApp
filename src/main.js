@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-10-13 22:18:37
- * @LastEditTime: 2020-12-25 16:14:44
+ * @LastEditTime: 2020-12-28 01:13:46
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \SimpleTravelApp\src\main.js
@@ -13,6 +13,7 @@ import App from './App'
 import router from './router'
 import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import store from './store'
 import 'styles/reset.css'
 import 'styles/border.css'
 import './assets/styles/iconfont.css'//移动端1像素边框问题
@@ -26,6 +27,7 @@ Vue.use(VueAwesomeSwiper)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

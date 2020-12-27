@@ -1,14 +1,14 @@
 <!--
  * @Author: your name
  * @Date: 2020-10-13 22:40:36
- * @LastEditTime: 2020-12-25 16:34:25
+ * @LastEditTime: 2020-12-27 23:29:09
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \SimpleTravelApp\src\pages\home\Home.vue
 -->
 <template>
   <div>
-    <home-header :city="city"></home-header>
+    <home-header></home-header>
     <home-swiper :list="swiperList"></home-swiper>
     <home-icons :list="iconList"></home-icons>
     <home-recommend :list="recommendList"></home-recommend>
@@ -40,7 +40,6 @@ export default {
       res = res.data;
       if (res.ret && res.data) {
         const data = res.data;
-        this.city = data.city;
         this.swiperList = data.swiperList;
         this.iconList = data.iconList;
         this.recommendList = data.recommendList;
@@ -51,7 +50,6 @@ export default {
   },
   data() {
     return {
-      city: "",
       swiperList: [],
       iconList: [],
       recommendList: [],

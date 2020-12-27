@@ -1,49 +1,48 @@
 <!--
  * @Author: your name
  * @Date: 2020-10-13 22:42:17
- * @LastEditTime: 2020-12-25 17:03:16
+ * @LastEditTime: 2020-12-28 00:59:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \SimpleTravelApp\src\pages\home\components\Header.vue
 -->
 
 <template>
-    <div class="header">
-        <div class="header-left">
-            <div class="iconfont back-icon" >&#xe685;</div>
-        </div>
-        <div class="header-input">
-            <span class="iconfont">&#xe67d;</span>
-            输入城市/景点/游玩主题
-        </div>
-        <router-link to="/city">
-        <div class="header-right">
-            {{this.city}}
-            <span class="iconfont arrow-icon">&#xe688;</span>
-        </div>
-        </router-link>
+  <div class="header">
+    <div class="header-left">
+      <div class="iconfont back-icon">&#xe685;</div>
     </div>
-    
+    <div class="header-input">
+      <span class="iconfont">&#xe67d;</span>
+      输入城市/景点/游玩主题
+    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        {{ this.city }}
+        <span class="iconfont arrow-icon">&#xe688;</span>
+      </div>
+    </router-link>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: 'HomeHeader',
-        props:{
-            city: String
-        }
-    }
-    
+import { mapState } from "vuex";
+export default {
+  name: "HomeHeader",
+  computed: {
+    ...mapState(['city'])
+  }
+};
 </script>
 
 <style lang="stylus" scoped>
-    @import '~styles/varibles.styl'
+@import '~styles/varibles.styl'
     .header
         display: flex
         line-height: $headerHeight
         background: $bgColor
         color: #fff
-        .header-left    
+        .header-left
             width: .64rem
             float: left
             .back-icon
@@ -60,12 +59,12 @@
             color: #ccc
             border-radius: .1rem
         .header-right
-            width: 1.24rem
+            min-width: 1.04rem
+            padding  0 .1rem
             float: right
             text-align: center
             color: #fff
             .arrow-icon
                 margin-left: -.04rem
                 font-size: .24rem
-                
 </style>
