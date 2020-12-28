@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-25 23:43:14
- * @LastEditTime: 2020-12-28 01:12:18
+ * @LastEditTime: 2020-12-28 14:58:05
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \SimpleTravelApp\src\pages\city\components\List.vue
@@ -66,6 +66,7 @@ export default {
     handleCityClick (city) {
       this.changeCity(city)
       this.$router.push('/')
+      console.log(city)
     },
     ...mapMutations(['changeCity'])
   },
@@ -85,22 +86,22 @@ export default {
 };
 </script>
 <style lang="stylus" scoped>
-@import '~styles/varibles.styl'
-.border-topbottom
+  @import '~styles/varibles.styl'
+  .border-topbottom
     &:before
-        border-color #ccc
+      border-color: #ccc
     &:after
-        border-color #ccc
-.border-bottom
+      border-color: #ccc
+  .border-bottom
     &:before
-        border-color #ccc
-.list
-    overflow hidden
-    position absolute
-    top 1.58rem
-    right 0
-    left 0
-    bottom 0
+      border-color: #ccc
+  .list
+    overflow: hidden
+    position: absolute
+    top: 1.58rem
+    left: 0
+    right: 0
+    bottom: 0
     .title
       line-height: .54rem
       background: #eee
