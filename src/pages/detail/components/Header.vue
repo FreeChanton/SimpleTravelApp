@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-29 16:35:47
- * @LastEditTime: 2020-12-29 17:06:41
+ * @LastEditTime: 2020-12-29 21:52:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \SimpleTravelApp\src\pages\detail\components\Header.vue
@@ -70,6 +70,7 @@ export default {
         color #ffffff
         font-size  .4rem
 .header-fixed
+    z-index 2
     top 0
     left 0
     right 0
