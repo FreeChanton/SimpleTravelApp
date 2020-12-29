@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-10-13 22:18:37
- * @LastEditTime: 2020-10-14 09:40:24
+ * @LastEditTime: 2020-12-29 16:00:42
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \SimpleTravelApp\build\webpack.base.conf.js
@@ -37,6 +37,7 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
       'styles': resolve('src/assets/styles'),
+      'common': resolve('src/common')
     }
   },
   module: {
