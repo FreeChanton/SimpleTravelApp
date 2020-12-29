@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-28 15:31:20
- * @LastEditTime: 2020-12-29 16:31:55
+ * @LastEditTime: 2020-12-29 22:25:28
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \SimpleTravelApp\src\pages\detail\components\Banner.vue
@@ -9,16 +9,16 @@
 <template>
   <div>
     <div class="banner" @click="handleBannerClick">
-      <img class="banner-img" src="" alt="" />
+      <img class="banner-img" :src="bannerImg" alt="" />
       <div class="banner-info">
-        <div class="banner-title">景区</div>
+        <div class="banner-title">{{this.sightName}}</div>
         <div class="banner-number">
           <span class="iconfont banner-icon">&#xe635;</span>
-          39
+          {{this.bannerImgs.length}}
         </div>
       </div>
     </div>
-    <common-gallary :imgs="imgs" 
+    <common-gallary :imgs="bannerImgs" 
     v-show="showGallary"
     @close="handleGallaryClose"></common-gallary>
   </div>
@@ -27,13 +27,15 @@
 import CommonGallary from "common/gallary/Gallary";
 export default {
   name: "DetailBanner",
+  props:{
+      sightName: String,
+      bannerImg: String,
+      bannerImgs: Array
+  },
   data() {
     return {
       showGallary: false,
-      imgs: [
-        "https://imgs.qunarzz.com/sight/p0/1904/c2/c26e1e4ffe899843a3.water.jpg_r_800x800_67a1106e.jpg",
-        "https://img1.qunarzz.com/sight/p0/2012/f4/f43d4eb957e67eeaa3.img.jpg_600x330_7eca1b04.jpg"
-      ]
+      
     };
   },
   methods:{

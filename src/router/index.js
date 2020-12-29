@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-10-13 22:18:37
- * @LastEditTime: 2020-12-28 15:25:51
+ * @LastEditTime: 2020-12-29 22:31:23
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \SimpleTravelApp\src\router\index.js
@@ -19,14 +19,18 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home
-    },{
+    }, {
       path: '/city',
       name: 'City',
       component: City
-    },{
+    }, {
       path: '/detail/:id',
       name: 'Detail',
       component: Detail
     }
-  ]
+  ],
+  scrollBehavior(to, from, savePosition) {
+    return { x: 0, y: 0 }
+  }
+
 })
