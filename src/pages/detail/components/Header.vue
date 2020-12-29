@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-29 16:35:47
- * @LastEditTime: 2020-12-29 16:59:28
+ * @LastEditTime: 2020-12-29 17:06:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \SimpleTravelApp\src\pages\detail\components\Header.vue
@@ -35,13 +35,11 @@ export default {
       const top = document.documentElement.scrollTop;
       if (top > 60) {
         let opacity = top / 140;
-        opacity =opacity>1?1:opacity
+        opacity = opacity > 1 ? 1 : opacity;
         this.opacityStyle = {
           opacity
         };
-        this.showAbs=false
-
-        
+        this.showAbs = false;
       } else {
         this.showAbs = true;
       }
@@ -50,6 +48,9 @@ export default {
   },
   activated() {
     window.addEventListener("scroll", this.handleScroll);
+  },
+  deactivated() {
+    window.removeEventListener("scroll", this.handleScroll);
   }
 };
 </script>
