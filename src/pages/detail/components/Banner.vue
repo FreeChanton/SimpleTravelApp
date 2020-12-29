@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-28 15:31:20
- * @LastEditTime: 2020-12-29 22:25:28
+ * @LastEditTime: 2020-12-29 22:42:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \SimpleTravelApp\src\pages\detail\components\Banner.vue
@@ -11,20 +11,25 @@
     <div class="banner" @click="handleBannerClick">
       <img class="banner-img" :src="bannerImg" alt="" />
       <div class="banner-info">
-        <div class="banner-title">{{this.sightName}}</div>
+        <div class="banner-title">{{ this.sightName }}</div>
         <div class="banner-number">
           <span class="iconfont banner-icon">&#xe635;</span>
-          {{this.bannerImgs.length}}
+          {{ this.bannerImgs.length }}
         </div>
       </div>
     </div>
-    <common-gallary :imgs="bannerImgs" 
-    v-show="showGallary"
-    @close="handleGallaryClose"></common-gallary>
+    <fade-animation>
+      <common-gallary
+        :imgs="bannerImgs"
+        v-show="showGallary"
+        @close="handleGallaryClose"
+      ></common-gallary>
+    </fade-animation>
   </div>
 </template>
 <script>
 import CommonGallary from "common/gallary/Gallary";
+import FadeAnimation from 'common/fade/FadeAnimation'
 export default {
   name: "DetailBanner",
   props:{
@@ -35,7 +40,7 @@ export default {
   data() {
     return {
       showGallary: false,
-      
+
     };
   },
   methods:{
@@ -47,7 +52,8 @@ export default {
       }
   },
   components: {
-    CommonGallary
+    CommonGallary,
+    FadeAnimation
   }
 };
 </script>
